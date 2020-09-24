@@ -1,0 +1,89 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "snes_latch",
+					"strict" : false
+				},
+				{
+					"name" : "snes_clk",
+					"strict" : false
+				},
+				{
+					"name" : "v_sync",
+					"strict" : false
+				},
+				{
+					"name" : "h_sync",
+					"strict" : false
+				},
+				{
+					"name" : "r[0]",
+					"strict" : false
+				},
+				{
+					"name" : "r[1]",
+					"strict" : false
+				},
+				{
+					"name" : "r[2]",
+					"strict" : false
+				},
+				{
+					"name" : "r[3]",
+					"strict" : false
+				},
+				{
+					"name" : "g[0]",
+					"strict" : false
+				},
+				{
+					"name" : "g[1]",
+					"strict" : false
+				},
+				{
+					"name" : "g[2]",
+					"strict" : false
+				},
+				{
+					"name" : "g[3]",
+					"strict" : false
+				},
+				{
+					"name" : "b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "strobe",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "data",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

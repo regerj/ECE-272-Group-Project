@@ -1,0 +1,83 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2019  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+# Date created = 12:16:52  June 01, 2020
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		SNES_to_VGA_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "MAX 10"
+set_global_assignment -name DEVICE 10M50DAF484C7G
+set_global_assignment -name TOP_LEVEL_ENTITY top_level
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 19.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:16:52  JUNE 01, 2020"
+set_global_assignment -name LAST_QUARTUS_VERSION "19.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_P11 -to clk
+set_location_assignment PIN_V8 -to data
+set_location_assignment PIN_V9 -to snes_latch
+set_location_assignment PIN_V10 -to snes_clk
+set_location_assignment PIN_C11 -to strobe
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE RGB_Generator.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA_Timings.sv
+set_global_assignment -name SYSTEMVERILOG_FILE top_level.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RGB_Decoder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Clock_Divider.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SNES_to_VGA.sv
+set_global_assignment -name SYSTEMVERILOG_FILE clock_divider_1Hz.sv
+set_location_assignment PIN_N3 -to h_sync
+set_location_assignment PIN_C10 -to reset
+set_location_assignment PIN_N1 -to v_sync
+set_location_assignment PIN_P1 -to b[0]
+set_location_assignment PIN_T1 -to b[1]
+set_location_assignment PIN_P4 -to b[2]
+set_location_assignment PIN_N2 -to b[3]
+set_location_assignment PIN_W1 -to g[0]
+set_location_assignment PIN_T2 -to g[1]
+set_location_assignment PIN_R2 -to g[2]
+set_location_assignment PIN_R1 -to g[3]
+set_location_assignment PIN_AA1 -to r[0]
+set_location_assignment PIN_V1 -to r[1]
+set_location_assignment PIN_Y2 -to r[2]
+set_location_assignment PIN_Y1 -to r[3]
+set_global_assignment -name SYSTEMVERILOG_FILE output_files/transformer.sv
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
